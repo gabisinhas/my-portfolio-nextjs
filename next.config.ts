@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
     distDir:'dist',
     images:{
       unoptimized: true
-    }
+    },
+    basePath: '/next-portfolio',
+    assetPrefix: '/next-portfolio'
 };
 
 export default nextConfig;
