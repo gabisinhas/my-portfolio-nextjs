@@ -1,9 +1,8 @@
 'use client'
 
 import { projects } from '../contents/project'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer, cardHoverSmall } from '../utils/animations'
+import { fadeInUp, staggerContainer} from '../utils/animations'
 
 export default function Projects() {
   return (
@@ -36,7 +35,8 @@ export default function Projects() {
             key={index}
             className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
             variants={fadeInUp}
-            {...cardHoverSmall}
+            whileHover={{ scale: 1.05 }} // Correct: apply whileHover directly
+            transition={{ type: "spring", stiffness: 300 }} // Correct: apply transition directly
           >
             
             <div className="p-6">
@@ -45,7 +45,7 @@ export default function Projects() {
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-
+                 {project.title} {/* Added project title to fix empty h3 */}
               </motion.h3>
               <motion.p 
                 className="text-gray-900 dark:text-white mb-4"
@@ -90,4 +90,4 @@ export default function Projects() {
       </motion.div>
     </div>
   )
-} 
+}

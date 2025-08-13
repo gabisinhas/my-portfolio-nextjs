@@ -1,5 +1,4 @@
 "use client"
-
 import { FaCode, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
 import { motion } from "framer-motion";
 import {
@@ -10,20 +9,25 @@ import {
   cardHover,
   cardHoverSmall,
 } from "../utils/animations";
-
 const AboutPage = () => {
   return (
     <>
       <div className="container max-w-7xl mx-auto py-18">
         <motion.h1
           className="text-4xl font-bold mb-8 text-center"
-          {...fadeInDown}
+          variants={fadeInDown}
+          initial="initial"
+          animate="animate"
         >
           About Me
         </motion.h1>
 
         {/* Bio Section */}
-        <motion.section className="mb-16" {...fadeInUp}>
+        <motion.section className="mb-16"
+          variants={fadeInUp}
+          initial="initial"
+          animate="animate"
+        >
           <p className="text-lg text-gray-200 dark:text-white max-w-3xl mx-auto text-center">
             I&apos;m a passionate Full Stack Developer with expertise in
             building scalable, secure web applications. With a strong foundation
@@ -38,10 +42,14 @@ const AboutPage = () => {
         {/* Skills Section */}
         <motion.section
           className="mb-16"
-          {...fadeIn}
+          variants={fadeIn}
+          initial="initial"
+          animate="animate"
           transition={{ delay: 0.2 }}
         >
-          <motion.h2 className="section-title" {...fadeInUp}>
+          <motion.h2 className="section-title"
+            variants={fadeInUp}
+          >
             Skills
           </motion.h2>
           <motion.div
@@ -189,10 +197,14 @@ const AboutPage = () => {
         {/* Experience Section */}
         <motion.section
           className="mb-16"
-          {...fadeIn}
+          variants={fadeIn}
+          initial="initial"
+          animate="animate"
           transition={{ delay: 0.4 }}
         >
-          <motion.h2 className="section-title" {...fadeInUp}>
+          <motion.h2 className="section-title"
+            variants={fadeInUp}
+          >
             Experience
           </motion.h2>
           <motion.div
@@ -202,9 +214,9 @@ const AboutPage = () => {
             animate="animate"
           >
             <motion.div
-              className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-              variants={fadeInUp}
-              {...cardHoverSmall}
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            variants={fadeInUp}
+            {...cardHover}
             >
               <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
                 Mid-Level Full Stack Developer
@@ -228,7 +240,7 @@ const AboutPage = () => {
             <motion.div
               className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
               variants={fadeInUp}
-              {...cardHoverSmall}
+              {...cardHover}
             >
               <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
                 Senior Business Analyst/Software Developer Junior

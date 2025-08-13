@@ -1,9 +1,9 @@
 "use client"
-import React, { useState } from "react"
-import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import React from "react"
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
 import { useTheme } from '../context/ThemeContext'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion} from 'framer-motion'
 
 const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
