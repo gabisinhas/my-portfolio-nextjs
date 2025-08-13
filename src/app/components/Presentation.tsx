@@ -15,7 +15,7 @@ export default function Presentation() {
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
-            <Image src="/profile.png" alt="Profile" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
+            <Image src="profile.png" alt="Profile" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
           </motion.div>
           <motion.h1 
             className="text-4xl md:text-5xl font-bold mb-6"
