@@ -213,15 +213,38 @@ const AboutPage = () => {
             initial="initial"
             animate="animate"
           >
+                        <motion.div
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            variants={fadeInUp}
+            {...cardHover}
+            >
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
+                Front End Developer
+              </h3>
+              <p className="text-primary mb-2">CI&T • Sep - Nov 2025</p>
+              <ul className="text-gray-900 dark:text-white list-disc list-inside space-y-2">
+                <li>
+                  Developed modular and reusable React web components for a telecom company. 
+                </li>
+                <li>
+                  Designed and implemented unit tests using Jest to ensure code quality and reliability. 
+                </li>
+                <li>
+                  Translated Figma designs into production-ready React components, following modern UI/UX and accessibility standards. 
+                </li>
+                <li>Integrated React Query for efficient data fetching and state management.</li>
+              </ul>
+            </motion.div>
+
             <motion.div
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHover}
             >
               <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Mid-Level Full Stack Developer
+                Full Stack Developer
               </h3>
-              <p className="text-primary mb-2">IBM • 2023 - Present</p>
+              <p className="text-primary mb-2">IBM • 2023 - Ago 2025</p>
               <ul className="text-gray-900 dark:text-white list-disc list-inside space-y-2">
                 <li>
                   Led development of multiple modules of web applications using VUEjs and
