@@ -17,7 +17,7 @@ export default function Hero() {
             {...scaleIn}
           >
           <Image
-            src="/profile.png"
+            src="profile.png"
             alt="Gabriela dos Santos"
             width={120}
             height={120}
