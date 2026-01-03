@@ -1,83 +1,151 @@
+bash
+bash
+bash
+npm run build - Creates a production build
+npm run start - Builds and exports the project as static files
+npm run lint - Runs ESLint
 # 🚀 Portfolio Next.js - Gabriela
 
-A modern and responsive portfolio built with Next.js 15, React 19, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**.
+
+---
 
 ## ✨ Features
 
-- 🎨 **Responsive Design**: Interface adapts to all devices
-- 🌙 **Dark/Light Mode**: Full support for light and dark themes
-- ⚡ **Optimized Performance**: Next.js 15 with App Router
-- 🎭 **Smooth Animations**: Elegant transitions using Framer Motion
-- 📱 **PWA Ready**: Configured to work as a Progressive Web App
-- 🔧 **TypeScript**: Type safety across the project
-- 🎯 **SEO Optimized**: Meta tags and structure optimized for SEO
+- 🎨 **Responsive Design** — Adapts to all devices
+- 🌙 **Dark/Light Mode** — Full theme support
+- ⚡ **Optimized Performance** — Next.js 15 App Router
+- 🎭 **Smooth Animations** — Framer Motion
+- 📱 **PWA Ready** — Progressive Web App
+- 🔧 **TypeScript** — Type safety everywhere
+- 🎯 **SEO Optimized** — Meta tags & structure
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies
 
-- **Framework**: Next.js 15.4.4
-- **React**: 19.1.0
-- **TypeScript**: Type safety
-- **Styling**: Tailwind CSS 4
-- **Animations**: Framer Motion
-- **Icons**: React Icons, Heroicons
-- **Notifications**: React Hot Toast
+- **Next.js** 15.4.4
+- **React** 19.1.0
+- **TypeScript**
+- **Tailwind CSS** 4
+- **Framer Motion**
+- **React Icons**, **Heroicons**
+- **React Hot Toast**
 
 ## 📁 Project Structure
 
+```text
 src/
-├── app/ # Next.js App Router
-│ ├── about/ # About page
-│ ├── contact/ # Contact page
-│ ├── projects/ # Projects page
-│ ├── layout.tsx # Main layout
-│ └── page.tsx # Home page
-├── components/ # Reusable components
-│ ├── layout/ # Navbar, Footer
-│ ├── sections/ # Hero, ProjectCard
-│ └── ui/ # Basic UI components
-├── data/ # Project and skills data
-├── hooks/ # Custom React hooks
-├── lib/ # Utilities and configurations
-├── context/ # Context providers
-└── types/ # TypeScript definitions
+├── app/         # App Router (about, contact, projects, layout, home)
+├── components/  # Reusable UI (layout, sections, ui)
+├── data/        # Project & skills data
+├── hooks/       # Custom React hooks
+├── lib/         # Utilities & configs
+├── context/     # Context providers
+└── types/       # TypeScript definitions
+```
 
-bash
-Copy code
-
-## 🚀 How to Run
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+  
-- npm or yarn  
+- Node.js 18+
+- npm or yarn
 
 ### Installation
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/gabisinhas/my-portfolio-nextjs.git
 cd my-portfolio-nextjs
-Install dependencies:
-
-bash
-Copy code
 npm install
-Run the project in development mode:
+```
 
-bash
-Copy code
+### Development
+
+```bash
 npm run dev
-Open http://localhost:3000 in your browser.
+# Open http://localhost:3000
+```
 
-Available Scripts
-npm run dev - Starts the development server with Turbopack
+### Production Build
 
-npm run build - Creates a production build
+```bash
+npm run build
+npm run start
+```
 
-npm run start - Builds and exports the project as static files
+### Linting
 
-npm run lint - Runs ESLint
+```bash
+npm run lint
+```
 
-📊 Pages
+## 📊 Pages
+
+- **Home** (`/`) — Personal introduction
+- **About** (`/about`) — Skills & experience
+- **Projects** (`/projects`) — Portfolio
+- **Contact** (`/contact`) — Contact form & info
+
+## 🎨 Customization
+
+**Personal Data:**
+- Edit files in `src/data/`:
+	- `personal-info.ts` — Personal info & social links
+	- `projects.ts` — Portfolio projects
+	- `skills.ts` — Skills & technologies
+
+**Colors & Theme:**
+- Edit `src/app/globals.css` and `tailwind.config.mjs`
+
+**Animations:**
+- Edit `src/lib/animations.ts`
+
+## 📱 Responsiveness
+
+Tested on:
+- Mobile (320px+)
+- Tablet (768px+)
+- Desktop (1024px+)
+- Large screens (1440px+)
+
+## 🔧 Environment Setup
+
+Create a `.env.local` file if needed:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://your-portfolio.com
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+```
+
+## 📈 Performance
+
+- ⚡ Lighthouse Score: 95+
+- 🎯 Core Web Vitals: Optimized
+- 📦 Bundle size optimized
+- 🖼️ Images optimized with Next.js Image
+
+## 🤝 Contribution
+
+1. Fork the project
+2. Create a branch: `git checkout -b feature/AmazingFeature`
+3. Commit: `git commit -m 'Add some AmazingFeature'`
+4. Push: `git push origin feature/AmazingFeature`
+5. Open a Pull Request
+
+## 📄 License
+
+MIT — see [LICENSE](LICENSE)
+
+## 👨‍💻 Author
+
+**Gabriela**  
+[GitHub: @gabisinhas](https://github.com/gabisinhas)  
+LinkedIn: [Your LinkedIn](https://linkedin.com/in/seu-perfil)  
+Email: seu-email@example.com
+
+---
+
+⭐ If this project helped you, consider giving it a star!
+
+Built with ❤️ using Next.js and TypeScript
 Home (/) - Personal introduction and overview
 
 About (/about) - Detailed info, skills, and experience
