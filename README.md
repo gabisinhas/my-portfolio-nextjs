@@ -1,227 +1,212 @@
-bash
-bash
-bash
-npm run build - Creates a production build
-npm run start - Builds and exports the project as static files
-npm run lint - Runs ESLint
-# 🚀 Portfolio Next.js - Gabriela
+# 🚀 Gabriela dos Santos — Portfolio (Next.js)
 
-A modern, responsive portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**.
+A modern, responsive developer portfolio built with **Next.js**, **TypeScript**, and **Tailwind CSS**, showcasing projects, skills, and experience with a clean UI and smooth animations.
+
+🔗 **Live demo:**  
+https://gabisinhas.github.io/my-portfolio-nextjs/
+
+
+## ✨ Highlights
+
+
+
+## 🛠️ Tech Stack
+## ✨ Features
+
+- Modern, responsive design
+- Dark/light theme toggle
+- Animated sections and smooth scrolling
+- Projects, experience, education, and skills sections
+- Contact form
 
 ---
 
-## ✨ Features
+## 🛠️ Tech Stack
 
-- 🎨 **Responsive Design** — Adapts to all devices
-- 🌙 **Dark/Light Mode** — Full theme support
-- ⚡ **Optimized Performance** — Next.js 15 App Router
-- 🎭 **Smooth Animations** — Framer Motion
-- 📱 **PWA Ready** — Progressive Web App
-- 🔧 **TypeScript** — Type safety everywhere
-- 🎯 **SEO Optimized** — Meta tags & structure
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-## 🛠️ Technologies
+---
 
-- **Next.js** 15.4.4
-- **React** 19.1.0
-- **TypeScript**
-- **Tailwind CSS** 4
-- **Framer Motion**
-- **React Icons**, **Heroicons**
-- **React Hot Toast**
+## 🚀 Getting Started
+
+1. **Clone the repository:**
+	```bash
+	git clone https://github.com/gabisinhas/my-portfolio-nextjs.git
+	cd next-portfolio
+	```
+2. **Install dependencies:**
+	```bash
+	npm install
+	```
+3. **Run the development server:**
+	```bash
+	npm run dev
+	```
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+  app/           # Next.js app directory (pages, layouts)
+  components/    # Reusable UI components
+  context/       # React context (e.g., ThemeContext)
+  data/          # Static data (projects, skills, etc.)
+  hooks/         # Custom React hooks
+  lib/           # Utility functions and constants
+  types/         # TypeScript types
+public/          # Static assets
+```
+
+---
+
+## 📦 Build
+
+To build the project for production:
+
+```bash
+npm run build
+```
+
+---
+
+## 🙋‍♂️ Contact
+
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/gabsanto) or open an issue if you have suggestions!
+
+---
+
+**MIT License**
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- React Hot Toast
+
+---
 
 ## 📁 Project Structure
 
 ```text
 src/
-├── app/         # App Router (about, contact, projects, layout, home)
-├── components/  # Reusable UI (layout, sections, ui)
-├── data/        # Project & skills data
-├── hooks/       # Custom React hooks
-├── lib/         # Utilities & configs
-├── context/     # Context providers
-└── types/       # TypeScript definitions
-```
+├── app/          # App Router pages (home, about, projects, contact)
+├── components/   # Reusable UI components
+├── data/         # Personal info, projects, skills
+├── hooks/        # Custom React hooks
+├── lib/          # Utilities & animations
+├── context/      # Context providers
+└── types/        # TypeScript definitions
+🚀 Getting Started
+Prerequisites
+Node.js 18+
 
-## 🚀 Getting Started
+npm or yarn
 
-### Prerequisites
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-```bash
+Installation
+bash
+Copy code
 git clone https://github.com/gabisinhas/my-portfolio-nextjs.git
 cd my-portfolio-nextjs
 npm install
-```
-
-### Development
-
-```bash
+Development
+bash
+Copy code
 npm run dev
-# Open http://localhost:3000
-```
+Open http://localhost:3000
 
-### Production Build
+📦 Production (Static Export)
+This project is configured for GitHub Pages using static export.
 
-```bash
+bash
+Copy code
 npm run build
-npm run start
-```
+The output is generated in the dist/ folder.
 
-### Linting
+📄 Pages
+Home (/) — Introduction and overview
 
-```bash
-npm run lint
-```
+About (/about) — Skills and experience
 
-## 📊 Pages
+Projects (/projects) — Selected work
 
-- **Home** (`/`) — Personal introduction
-- **About** (`/about`) — Skills & experience
-- **Projects** (`/projects`) — Portfolio
-- **Contact** (`/contact`) — Contact form & info
-
-## 🎨 Customization
-
-**Personal Data:**
-- Edit files in `src/data/`:
-	- `personal-info.ts` — Personal info & social links
-	- `projects.ts` — Portfolio projects
-	- `skills.ts` — Skills & technologies
-
-**Colors & Theme:**
-- Edit `src/app/globals.css` and `tailwind.config.mjs`
-
-**Animations:**
-- Edit `src/lib/animations.ts`
-
-## 📱 Responsiveness
-
-Tested on:
-- Mobile (320px+)
-- Tablet (768px+)
-- Desktop (1024px+)
-- Large screens (1440px+)
-
-## 🔧 Environment Setup
-
-Create a `.env.local` file if needed:
-
-```env
-NEXT_PUBLIC_SITE_URL=https://your-portfolio.com
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-```
-
-## 📈 Performance
-
-- ⚡ Lighthouse Score: 95+
-- 🎯 Core Web Vitals: Optimized
-- 📦 Bundle size optimized
-- 🖼️ Images optimized with Next.js Image
-
-## 🤝 Contribution
-
-1. Fork the project
-2. Create a branch: `git checkout -b feature/AmazingFeature`
-3. Commit: `git commit -m 'Add some AmazingFeature'`
-4. Push: `git push origin feature/AmazingFeature`
-5. Open a Pull Request
-
-## 📄 License
-
-MIT — see [LICENSE](LICENSE)
-
-## 👨‍💻 Author
-
-**Gabriela**  
-[GitHub: @gabisinhas](https://github.com/gabisinhas)  
-LinkedIn: [Your LinkedIn](https://linkedin.com/in/seu-perfil)  
-Email: seu-email@example.com
-
----
-
-⭐ If this project helped you, consider giving it a star!
-
-Built with ❤️ using Next.js and TypeScript
-Home (/) - Personal introduction and overview
-
-About (/about) - Detailed info, skills, and experience
-
-Projects (/projects) - Portfolio of completed projects
-
-Contact (/contact) - Contact form and personal info
+Contact (/contact) — Contact information
 
 🎨 Customization
 Personal Data
-Edit the files in /src/data/ to customize:
+Edit files in src/data/:
 
-personal-info.ts - Personal information and social links
+personal-info.ts — Bio & social links
 
-projects.ts - Portfolio projects
+projects.ts — Portfolio projects
 
-skills.ts - Skills and technologies
+skills.ts — Skills & technologies
 
-Colors and Theme
-Configure in /src/app/globals.css and Tailwind config.
+Theme & Styling
+src/app/globals.css
+
+tailwind.config.mjs
 
 Animations
-Customize animations in /src/lib/animations.ts.
+src/lib/animations.ts
 
 📱 Responsiveness
-The project is fully responsive and tested on:
+Tested on:
 
-📱 Mobile (320px+)
+Mobile (320px+)
 
-📱 Tablet (768px+)
+Tablet (768px+)
 
-💻 Desktop (1024px+)
+Desktop (1024px+)
 
-🖥️ Large screens (1440px+)
+Large screens (1440px+)
 
-🔧 Environment Setup
-Create a .env.local file for environment variables (if needed):
+🔧 Environment Variables (Optional)
+Create a .env.local file if needed:
 
 env
 Copy code
-# Example variables
 NEXT_PUBLIC_SITE_URL=https://your-portfolio.com
 NEXT_PUBLIC_GA_ID=your-google-analytics-id
 📈 Performance
-⚡ Lighthouse Score: 95+
+Lighthouse score: 95+
 
-🎯 Core Web Vitals: Optimized
+Optimized Core Web Vitals
 
-📦 Bundle size optimized
+Lean bundle size
 
-🖼️ Images optimized with Next.js Image
+Static image optimization
 
-🤝 Contribution
-Fork the project
+🤝 Contributing
+Fork the repository
 
-Create a feature branch (git checkout -b feature/AmazingFeature)
+Create a feature branch
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+bash
+Copy code
+git checkout -b feature/YourFeature
+Commit your changes
 
-Push to the branch (git push origin feature/AmazingFeature)
+Push to your branch
 
 Open a Pull Request
 
 📄 License
-This project is licensed under the MIT License. See LICENSE for details.
+MIT License — see LICENSE
 
-👨‍💻 Author
-Gabriela
+👩‍💻 Author
+Gabriela dos Santos
+GitHub: https://github.com/gabisinhas
+LinkedIn: https://linkedin.com/in/gabsanto
+Email: gabisinhas@yahoo.com.br
 
-GitHub: @gabisinhas
-
-LinkedIn: Your LinkedIn
-
-Email: your-email@example.com
-
-⭐ If this project helped you, consider giving it a star!
+⭐ If you like this project, feel free to give it a star!
 
 Built with ❤️ using Next.js and TypeScript
-
