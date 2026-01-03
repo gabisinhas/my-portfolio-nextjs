@@ -1,290 +1,34 @@
-"use client"
-import { FaCode, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
-import { motion } from "framer-motion";
-import {
-  fadeInUp,
-  fadeInDown,
-  fadeIn,
-  staggerContainer,
-  cardHover,
-  cardHoverSmall,
-} from "../utils/animations";
-const AboutPage = () => {
+'use client';
+
+import { motion } from 'framer-motion';
+import { staggerContainer } from '@/lib/animations';
+
+import ExperienceSection from '@/components/sections/ExperienceSection';
+import EducationSection from '@/components/sections/EducationSection';
+
+export default function About() {
   return (
-    <>
-      <div className="container max-w-7xl mx-auto py-18">
-        <motion.h1
-          className="text-4xl font-bold mb-8 text-center"
-          variants={fadeInDown}
-          initial="initial"
-          animate="animate"
-        >
+    <motion.main
+      variants={staggerContainer}
+      initial="initial"
+      animate="animate"
+      className="max-w-5xl mx-auto px-4 py-20 space-y-24"
+    >
+      
+      <section className="text-center max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">
           About Me
-        </motion.h1>
+        </h1>
+        <p className="text-gray-600 dark:text-gray-300">
+          Full Stack Software Engineer with 4+ years of experience building
+          scalable web applications using React, TypeScript, and Python.
+          Experience in enterprise systems, security practices, and modern
+          front-end architectures.
+        </p>
+      </section>
 
-        {/* Bio Section */}
-        <motion.section className="mb-16"
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-        >
-          <p className="text-lg text-gray-200 dark:text-white max-w-3xl mx-auto text-center">
-            I&apos;m a passionate Full Stack Developer with expertise in
-            building scalable, secure web applications. With a strong foundation
-            in both frontend and backend technologies, I create seamless user
-            experiences and robust server-side solutions. I am skilled in
-            JavaScript, React, Node.js, and Python (Flask & FastAPI), with
-            hands-on experience in building RESTful APIs and deploying
-            applications on cloud platforms.
-          </p>
-        </motion.section>
-
-        {/* Skills Section */}
-        <motion.section
-          className="mb-16"
-          variants={fadeIn}
-          initial="initial"
-          animate="animate"
-          transition={{ delay: 0.2 }}
-        >
-          <motion.h2 className="section-title"
-            variants={fadeInUp}
-          >
-            Skills
-          </motion.h2>
-          <motion.div
-            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
-          >
-            <motion.div
-              className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md flex flex-col items-center"
-              variants={fadeInUp}
-              {...cardHover}
-            >
-              <FaCode className="h-8 w-8 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Frontend
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2 mb-2">
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-                  alt="Vue.js"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-                  alt="React"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg"
-                  alt="Angular"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-                  alt="TypeScript"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="Tailwind CSS"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                  alt="HTML5"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-                  alt="CSS3"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/less/less-plain-wordmark.svg"
-                  alt="LESS"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-                  alt="SASS"
-                  className="w-8 h-8"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md flex flex-col items-center"
-              variants={fadeInUp}
-              {...cardHover}
-            >
-              <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Backend
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2 mb-2">
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-                  alt="Node.js"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
-                  alt="Express"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg"
-                  alt="Java"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-                  alt="Python"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
-                  alt="PostgreSQL"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
-                  alt="MongoDB"
-                  className="w-8 h-8"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md flex flex-col items-center"
-              variants={fadeInUp}
-              {...cardHover}
-            >
-              <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Tools & Others
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2 mb-2">
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original-wordmark.svg"
-                  alt="GitHub"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
-                  alt="Docker"
-                  className="w-8 h-8"
-                />
-                <img
-                  src="https://img.icons8.com/color/48/000000/jira.png"
-                  alt="JIRA"
-                  className="w-8 h-8"
-                />
-              </div>
-            </motion.div>
-          </motion.div>
-        </motion.section>
-
-        {/* Experience Section */}
-        <motion.section
-          className="mb-16"
-          variants={fadeIn}
-          initial="initial"
-          animate="animate"
-          transition={{ delay: 0.4 }}
-        >
-          <motion.h2 className="section-title"
-            variants={fadeInUp}
-          >
-            Experience
-          </motion.h2>
-          <motion.div
-            className="max-w-3xl mx-auto space-y-8"
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
-          >
-                        <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHover}
-            >
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Front End Developer
-              </h3>
-              <p className="text-primary mb-2">CI&T • Sep - Nov 2025</p>
-              <ul className="text-gray-900 dark:text-white list-disc list-inside space-y-2">
-                <li>
-                  Developed modular and reusable React web components for a telecom company. 
-                </li>
-                <li>
-                  Designed and implemented unit tests using Jest to ensure code quality and reliability. 
-                </li>
-                <li>
-                  Translated Figma designs into production-ready React components, following modern UI/UX and accessibility standards. 
-                </li>
-                <li>Integrated React Query for efficient data fetching and state management.</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHover}
-            >
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Full Stack Developer
-              </h3>
-              <p className="text-primary mb-2">IBM • 2023 - Ago 2025</p>
-              <ul className="text-gray-900 dark:text-white list-disc list-inside space-y-2">
-                <li>
-                  Led development of multiple modules of web applications using VUEjs and
-                  Node.js
-                </li>
-                <li>
-                  Migrated front-end from Vue2 to Vue3
-                </li>
-                <li>
-                  Mitigated security vulnerabilities by 95% across multiple applications
-                </li>
-                <li>Mentored junior developers and conducted code reviews</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-              variants={fadeInUp}
-              {...cardHover}
-            >
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Senior Business Analyst/Software Developer Junior
-              </h3>
-              <p className="text-primary mb-2">
-                IBM • 2019 - 2023
-              </p>
-              <ul className="text-gray-900 dark:text-white list-disc list-inside space-y-2">
-                <li>Created frontend applications (Vue.js) and backend APIs (Python/Flask) for HR systems</li>
-                <li>
-                    Migrated stored procedures from Java to Python; led hybrid cloud transitions
-                </li>
-                <li>Built unit tests using Pytest</li>
-                <li>Developed user reports using SQL</li>
-              </ul>
-            </motion.div>
-          </motion.div>
-        </motion.section>
-      </div>
-    </>
+      <ExperienceSection />
+      <EducationSection />
+    </motion.main>
   );
-};
-
-export default AboutPage;
+}

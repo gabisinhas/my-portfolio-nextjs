@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { ThemeProvider } from "./context/ThemeContext";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import { ThemeProvider } from "../context/ThemeContext";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,15 +32,17 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white flex flex-col min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white min-h-screen flex flex-col`}
+        style={{ minHeight: '100dvh', display: 'flex', flexDirection: 'column' }}
       >
         <ThemeProvider>
           <Navbar />
-          {/* Main content wrapper */}
-          <main className="flex-grow">
+          
+          <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
             {children}
           </main>
           <Footer />
+          <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
         </ThemeProvider>
       </body>
     </html>

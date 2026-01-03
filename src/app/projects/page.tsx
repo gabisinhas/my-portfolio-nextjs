@@ -1,8 +1,9 @@
 'use client'
 
-import { projects } from '../contents/project'
+import { projects } from '../../data/projects'
 import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer} from '../utils/animations'
+import { staggerContainer} from '../../lib/animations'
+import ProjectCard from '../../components/sections/ProjectCard'
 
 export default function Projects() {
   return (
@@ -16,7 +17,7 @@ export default function Projects() {
         My Projects
       </motion.h1>
       <motion.p 
-        className="text-lg text-secondary mb-24 text-center"
+        className="text-lg text-secondary mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -25,69 +26,15 @@ export default function Projects() {
       </motion.p>
       
       <motion.div 
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={staggerContainer}
         initial="initial"
         animate="animate"
       >
         {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
-            variants={fadeInUp}
-            whileHover={{ scale: 1.05 }} // Correct: apply whileHover directly
-            transition={{ type: "spring", stiffness: 300 }} // Correct: apply transition directly
-          >
-            
-            <div className="p-6">
-              <motion.h3 
-                className="text-xl font-semibold mb-2"
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                 {project.title} {/* Added project title to fix empty h3 */}
-              </motion.h3>
-              <motion.p 
-                className="text-gray-900 dark:text-white mb-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                <b>{project.title}</b>
-                <br />
-                <br />
-                {project.description}
-              </motion.p>
-              
-              <motion.div 
-                className="flex flex-wrap gap-2 mb-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-              >
-                {project.technologies.map((tech, techIndex) => (
-                  <motion.span
-                    key={techIndex}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
-              </motion.div>
-              
-              <motion.div 
-                className="flex gap-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-              >
-              </motion.div>
-            </div>
-          </motion.div>
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </motion.div>
     </div>
-  )
+  );
 }
