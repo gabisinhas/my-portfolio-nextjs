@@ -10,7 +10,7 @@ and Node.js on the back end, focusing on clean architecture and maintainable cod
   location: 'São Paulo, Brazil',
   yearsOfExperience: 4,
   email: 'gabisinhas@yahoo.com.br',
-  phone: '+55 11 91234-5678',
+  phone: '+55 19 99645-0442',
 };
 
 export const socialLinks: SocialLink[] = [
