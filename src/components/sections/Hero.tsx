@@ -16,14 +16,15 @@ export default function Hero() {
             className="flex justify-center"
             {...scaleIn}
           >
-            <Image
-              src="/profile.png"
-              alt="Gabriela dos Santos"
-              width={120}
-              height={120}
-              className="rounded-full ring-2 ring-primary/40"
-              priority
-            />
+          <Image
+            src="/profile.png"
+            alt="Gabriela dos Santos"
+            width={120}
+            height={120}
+            className="rounded-full ring-2 ring-primary/40"
+            priority
+            unoptimized
+          />
           </motion.div>
 
           {/* Name */}
